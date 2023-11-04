@@ -8,9 +8,9 @@ public interface CursoService {
 
 	List <Curso> getAllcursos();
 	List <Curso> newCurso(Curso curso);
-	List <Curso> deleteCurso(int codCurso);
-	void updateDuracion (int codCurso, int duracion);
-	Curso buscarCurso(int codCurso);
+	List <Curso> deleteCurso(String codCurso);
+	void updateDuracion (String codCurso, int duracion);
+	Curso buscarCurso(String codCurso);
 	List <Curso> buscarPorPrecio (int pMin, int pMax);
 	
 	

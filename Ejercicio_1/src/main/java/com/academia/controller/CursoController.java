@@ -32,17 +32,17 @@ public class CursoController {
 	}
 	
 	@DeleteMapping (value="deletecurso/{codCurso}",produces=MediaType.APPLICATION_JSON_VALUE) 
-	public List<Curso> deleteCurso (@PathVariable int codCurso){
+	public List<Curso> deleteCurso (@PathVariable String codCurso){
 		return cursoService.deleteCurso(codCurso);
 	}
 	
 	@PutMapping (value="updatecurso/{codCurso}/{duracion}") 
-	public void updateDuracion (@PathVariable ("codCurso") int codCurso, @PathVariable ("duracion") int duracion) {
+	public void updateDuracion (@PathVariable ("codCurso") String codCurso, @PathVariable ("duracion") int duracion) {
 		cursoService.updateDuracion(codCurso, duracion);
 	}
 	
 	@GetMapping(value="curso/{codCurso}")
-	public Curso buscarCurso(@PathVariable ("codCurso") int codCurso){
+	public Curso buscarCurso(@PathVariable ("codCurso") String codCurso){
 		return cursoService.buscarCurso(codCurso);
 	}
 	

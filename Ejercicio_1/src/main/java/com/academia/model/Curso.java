@@ -9,20 +9,20 @@ import jakarta.persistence.Table;
 public class Curso {
 	
 	@Id
-	private int codCurso;
+	private String codCurso;
 	private String nombre;
 	private int duracion;
-	private int precio;
+	private float precio;
 	
 	public Curso() {
 		super();
 	}
 
-	public int getCodCurso() {
+	public String getCodCurso() {
 		return codCurso;
 	}
 
-	public void setCodCurso(int codCurso) {
+	public void setCodCurso(String codCurso) {
 		this.codCurso = codCurso;
 	}
 
@@ -42,11 +42,11 @@ public class Curso {
 		this.duracion = duracion;
 	}
 
-	public int getPrecio() {
+	public float getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(int precio) {
+	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
 	
