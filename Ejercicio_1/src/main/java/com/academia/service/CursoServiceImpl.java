@@ -27,13 +27,13 @@ public class CursoServiceImpl implements CursoService{
 	}
 
 	@Override
-	public List<Curso> deleteCurso(int Codcurso) {
+	public List<Curso> deleteCurso(String Codcurso) {
 		cursoDao.deleteById(Codcurso);
 		return cursoDao.findAll();
 	}
 
 	@Override
-	public void updateDuracion(int codCurso, int duracion) {
+	public void updateDuracion(String codCurso, int duracion) {
 		
 		Optional<Curso> cursoAModificar= cursoDao.findById(codCurso);
 		
@@ -46,7 +46,7 @@ public class CursoServiceImpl implements CursoService{
 	}
 
 	@Override
-	public Curso buscarCurso(int codCurso) {
+	public Curso buscarCurso(String codCurso) {
 		return cursoDao.findById(codCurso).orElse(null);
 	}
 

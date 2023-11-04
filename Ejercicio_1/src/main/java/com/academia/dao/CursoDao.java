@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.academia.model.Curso;
 
-public interface CursoDao extends JpaRepository <Curso, Integer> {
+public interface CursoDao extends JpaRepository <Curso, String> {
 	
 	
 	 @Query(value = "SELECT * from curso" +
