@@ -1,14 +1,7 @@
 package com.academia.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-@Entity
-@Table (name="curso")
 public class Curso {
 	
-	@Id
 	private String codCurso;
 	private String nombre;
 	private int duracion;
@@ -49,11 +42,5 @@ public class Curso {
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
-	
-	
-	
-	
-	
-	
 
 }
