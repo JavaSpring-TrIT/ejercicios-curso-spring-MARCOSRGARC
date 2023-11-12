@@ -15,7 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.academia.model.Curso;
 import com.academia.service.CursoService;
 
+import io.swagger.annotations.Api;
+
+
+
+
+
 @RestController
+@Api
 public class CursoController {
 	
 	@Autowired
