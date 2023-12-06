@@ -3,6 +3,7 @@ package com.academia.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,11 +19,16 @@ import com.academia.service.CursoService;
 @RestController
 public class CursoController {
 	
+	@Value("${eureka.instance.instance-id}")
+	String instanciaId;
+	
 	@Autowired
 	CursoService cursoService;
 	
 	@GetMapping (value="cursos",produces=MediaType.APPLICATION_JSON_VALUE)
 	public List<Curso> getAllCursos(){
+		
+		System.out.println(instanciaId);
 		return cursoService.getAllcursos();
 	}
 
