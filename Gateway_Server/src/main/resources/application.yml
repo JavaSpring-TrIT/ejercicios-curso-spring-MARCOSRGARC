@@ -13,7 +13,7 @@ spring:
               allowedHeaders: "*"   
       routes:
       - id: servFormacion #Id de la ruta 
-        uri: lb://servicio-formacion
+        uri: lb://servicio-formaciones
         predicates:
           - Path=/sformacion/** #Cuando Gateway detecte que en la peticion URL venga este path, enrutara la peticion hacia el servicio indicado en la propiedad "uri" (lb://servicio-productos)
         filters:
