@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: servicio-cursos
+  cloud:
+    config:
+      uri: http://localhost:8888
