@@ -1,0 +1,13 @@
+server:
+  port: 8888  # Puerto en el que el servidor de configuración estará escuchando
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JavaSpring-TrIT/ejercicios-curso-spring-MARCOSRGARC # URL del repositorio Git
+          #username: tu-usuario  # (opcional) Nombre de usuario si el repositorio requiere autenticación
+          #password: tu-contraseña  # (opcional) Contraseña si el repositorio requiere autenticación
+          search-paths: configuraciones  # (opcional) Ruta dentro del repositorio que contiene las configuraciones
+          default-label: main  # (opcional) Etiqueta (branch) predeterminada a utilizar en el repositorio

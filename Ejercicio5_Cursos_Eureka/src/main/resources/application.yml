@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    password: EC530A97BF69B38911923AEAA90DC477
+    url: jdbc:mysql://localhost:3306/academia
+    username: librouser
+  jpa:
+    hibernate:
+      ddl-auto: update
