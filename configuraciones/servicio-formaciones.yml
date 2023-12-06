@@ -2,7 +2,7 @@ server:
   port: 8085
 spring:
   application:
-    name: servicio-formacion
+    name: servicio-formaciones
 eureka:
   instance:
     instanceId: servicio-formacion #Cambiar nombre para cada instancia
