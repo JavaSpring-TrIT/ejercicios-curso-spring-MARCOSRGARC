@@ -18,13 +18,6 @@ spring:
           - Path=/sformacion/** #Cuando Gateway detecte que en la peticion URL venga este path, enrutara la peticion hacia el servicio indicado en la propiedad "uri" (lb://servicio-productos)
         filters:
           - RewritePath=/sformacion/*, / #Lo que indica es que a la url indicada en la propiedad "uri", se le adicionará un "/" mas todo lo que venga despues de "sproductos" en la petición URL de entrada
-          
-      - id: servPedidos
-        uri: lb://servicio-pedidos 
-        predicates:
-          - Path=/spedidos/**
-        filters:
-          - RewritePath=/spedidos/*, /      
 server:
   port: 9000
 eureka:
