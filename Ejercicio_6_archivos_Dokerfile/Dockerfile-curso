@@ -1,0 +1,5 @@
+# Usa la imagen oficial de OpenJDK 17 como base
+FROM openjdk:17
+ADD curso.jar curso.jar
+EXPOSE 8080
+ENTRYPOINT [ "java","-jar","curso.jar" ]

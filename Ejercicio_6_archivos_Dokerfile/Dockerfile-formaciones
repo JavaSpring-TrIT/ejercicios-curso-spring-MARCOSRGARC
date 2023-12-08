@@ -1,0 +1,5 @@
+# Usa la imagen oficial de OpenJDK 17 como base
+FROM openjdk:17
+ADD formaciones.jar formaciones.jar
+EXPOSE 9000
+ENTRYPOINT [ "java","-jar","formaciones.jar" ]
